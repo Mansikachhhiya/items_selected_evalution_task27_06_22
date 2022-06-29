@@ -46,7 +46,6 @@
     color: white;
     padding: 15px 30px;
     text-align: center;
-    display: inline-block;
     font-size: 25px;
     cursor: pointer;
     margin: 4px 2px;
@@ -58,10 +57,9 @@
     color: black;
     padding: 15px 85px;
     text-align: center;
-    display: inline-block;
     font-size: 25px;
     cursor: pointer;
-    margin: 4px 2px;
+    margin: 20px 2px;
     background-color: white;
     border-radius: 5px;
     border: 1px solid black;

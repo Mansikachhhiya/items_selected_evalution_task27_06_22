@@ -22,14 +22,21 @@ $('#add_btn').click(function(){
   let row = $(this).siblings('#table').children().children().children().children('#row1').html();
   let rowCount = $('#table tr').length
   if(rowCount < 4){
+   
       count++
       $('#table').append(`<tr id="row${count}">'<td><select name="itemselect" id="itemselect" class="drop_dowm"><option value="Item1">Item1</option><option value="Item2">Item2</option><option value="Item3">Item3</option></select></td><td><button type="submit" id="delete_btn" value="Submit" class="delete_class">X</button></td>'</tr>`);
+
       // now we will change the id of the created id so that we can access it
       $(`#row${count}`).children().children('select').attr('id',`selector${count}`)
       $(`#row${count}`).children().children('button').attr('id',`delete_btn${count}`)
       $(`#row${count}`).children().children('button').attr('class',`delete_but new`)
-
+     
   }
+  // if(rowCount===4){
+  //   $('#add_btn').attr("required", false);
+  // }
+
+
   $('.delete_but').click(function(){
     if($(this).attr('class') === 'delete_but new'){
         $(this).parent().parent().remove();
@@ -151,35 +158,37 @@ $(document).ready(function() {
 
 
 
+
 // $(document).on('click','#itemselect',function(event){
-//     if($('#itemselect').val()=="Item1"){
-//       $('#table').children().children().children().children('#itemselect1').children('option[value="Item1"]').attr("disabled","disabled");
+
+//     if($('option').val() == 'Item1'){
+//       $('#table').children().children("#row2").children().children('.drop_dowm').children("option[value='Item1']").attr("disabled","disabled");
          
 //     }
-//     else if($('#itemselect').val()=="Item2"){
-//       $('#table').children().children().children().children('#itemselect1').children('option[value=Item2]').attr("disabled","disabled");
+//     if($('option').val()=="Item2"){
+//       $('#table').children().children("#row2").children().children('.drop_dowm').children("option[value='Item2']").attr("disabled","disabled");
 //     }
 //     else{
-//       $('#table').children().children().children().children('#itemselect1').children('option[value=Item3]').attr("disabled","disabled");
+//       $('#table').children().children("#row2").children().children('.drop_dowm').children("option[value='Item3']").attr("disabled","disabled");
 //     }
-    // if($('#itemselect1').val()=="Item1"){
-    //   $('#table').children().children().children().children().children('option[value=Item1]').attr("disabled","disabled");
-    // }
-    // if($('#itemselect1').val()=="Item2"){
-    //   $('#table').children().children().children().children().children('option[value=Item2]').attr("disabled","disabled");
-    // }
-    // if($('#itemselect1').val()=="Item3"){
-    //   $('#table').children().children().children().children().children('option[value=Item3]').attr("disabled","disabled");
-    // }
-    // if($('#itemselect').val()=="Item1" && $('#itemselect1').val()=="Item3"){
-    //   $('#table').children().children().children().children().children('option[value=Item3]').attr("disabled","disabled");
-    //   // $('#table').children().children().children().children("#itemselect1").children('option[value=Item1]').attr("disabled","disabled");
-    // }
-    // if($('#itemselect').val()=="Item1" && $('#itemselect1').val()=="Item2"){
-    //   $('#table').children().children().children().children().children('option[value=Item1]').attr("disabled","disabled");
-    // }
-    // if($('#itemselect1').val()=="Item2" && $('#itemselect').val()=="Item3"){
-    //   $('#table').children().children().children().children().children('option[value=Item2]').attr("disabled","disabled");
-    // }
+//     if($('#itemselect1').val()=="Item1"){
+//       $('#table').children().children().children().children().children('option[value=Item1]').attr("disabled","disabled");
+//     }
+//     if($('#itemselect1').val()=="Item2"){
+//       $('#table').children().children().children().children().children('option[value=Item2]').attr("disabled","disabled");
+//     }
+//     if($('#itemselect1').val()=="Item3"){
+//       $('#table').children().children().children().children().children('option[value=Item3]').attr("disabled","disabled");
+//     }
+//     if($('#itemselect').val()=="Item1" && $('#itemselect1').val()=="Item3"){
+//       $('#table').children().children().children().children().children('option[value=Item3]').attr("disabled","disabled");
+//       // $('#table').children().children().children().children("#itemselect1").children('option[value=Item1]').attr("disabled","disabled");
+//     }
+//     if($('#itemselect').val()=="Item1" && $('#itemselect1').val()=="Item2"){
+//       $('#table').children().children().children().children().children('option[value=Item1]').attr("disabled","disabled");
+//     }
+//     if($('#itemselect1').val()=="Item2" && $('#itemselect').val()=="Item3"){
+//       $('#table').children().children().children().children().children('option[value=Item2]').attr("disabled","disabled");
+//     }
     
 // })
