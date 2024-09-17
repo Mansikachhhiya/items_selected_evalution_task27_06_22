@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item</title>
+  <link rel="stylesheet" href="../css/item.css">
+</head>
+
+<body>
+  <div class="container">
+    <table id="table">
+      <tr>
+        <th>Products</th>
+        <th>Action</th>
+      </tr>
+      <tr id ='row1'>
+        <td><select name="itemselect" id="itemselect" class="drop_dowm">
+          <!-- <option value="">-Select items</option> -->
+            <option value="Item1">Item1</option>
+            <option value="Item2">Item2</option>
+            <option value="Item3">Item3</option>
+          </select></td>
+        <td><button type="submit" id="delete_btn" value="Submit" class="delete_class"
+        >X</button> </td>
+      </tr>
+      <!-- <tbody id="tbody">
+
+      </tbody> -->
+      <!-- <tbody id="tbo"></tbody> -->
+    </table>
+    <button type="submit" id="add_btn" value="Submit" class="add_class">+ Add </button>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+  <script src="../js/item.js"></script>
+</body>
+
+</html>
